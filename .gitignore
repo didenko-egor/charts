@@ -1,0 +1,30 @@
+/node_modules
+/.idea
+/.env
+/.next
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+.DS_Store
+
+#sonar
+.scannerwork
+
+#vscode
+.vscode
+
+# local env files
+.env.local
+
+#sentry
+.sentryclirc
+
+#nvm
+.nvmrc
