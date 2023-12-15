@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.corp.tass.ru/tassovec-admin/tassovec-admin-front"
+    "url": "https://github.com/didenko-egor/charts"
   },
   "license": "UNLICENSED",
   "author": "TASS",
