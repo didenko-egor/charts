@@ -1,0 +1,59 @@
+@mixin spinner($image) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotation 1.1s infinite linear;
+
+  background: {
+    position: center center;
+    image: $image;
+    repeat: no-repeat;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin cardWithLogo() {
+  position: relative;
+
+  .configurator_tass_logo {
+    position: absolute;
+    left: 0;
+    z-index: 11;
+    width: 68px;
+    height: 68px;
+    background: center url("configurator/media/svg/logo.svg") no-repeat;
+  }
+}
+
+@mixin dividingLine() {
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  width: calc(100% - 48px);
+  height: 1px;
+  background-color: var(--ds-color-grey-15);
+  transform: translate(-50%, 50%);
+  content: "";
+}
+
+@mixin baseOverlay($br) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(7 13 58 / 80%);
+  border-radius: $br;
+}

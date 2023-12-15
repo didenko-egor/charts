@@ -1,0 +1,35 @@
+@import "./variables";
+@import "@design-system/core/index.css";
+@import "./fonts";
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+svg {
+  user-select: none;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+::selection {
+  background-color: var(--ds-color-text-selection);
+}

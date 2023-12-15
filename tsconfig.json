@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "jsx": "react-jsx",
+    "isolatedModules": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "noEmit": true,
+    "paths": {
+      "*": [
+        "src/*"
+      ]
+    },
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+  "types": [
+    "jest",
+    "vite/client"
+  ],
+  "plugins": [
+    {
+      "name": "typescript-plugin-css-modules"
+    }
+  ],
+  "exclude": [
+    "**/dist",
+    "node_modules",
+    "__tests__"
+  ]
+}
