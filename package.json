@@ -1,8 +1,8 @@
 {
-  "name": "tassovec-admin-front",
+  "name": "Charts",
   "private": true,
   "version": "0.8.0",
-  "description": "Tassovec CMS monorepo",
+  "description": "CHARTS",
   "main": "./src/index.ts",
   "scripts": {
     "dev": "vite serve",
@@ -18,38 +18,23 @@
     "url": "https://github.com/didenko-egor/charts"
   },
   "license": "UNLICENSED",
-  "author": "TASS",
-  "contributors": [
-    {
-      "name": "Nadezhda Vorontsova",
-      "email": "vorontsova_n@tass.ru"
-    },
-    {
-      "name": "Evgeniy Grinko",
-      "email": "grinko_e@tass.ru"
-    },
-    {
-      "name": "Ivan Grinko",
-      "email": "grinko_i@tass.ru"
-    },
-    {
-      "name": "Ivan Gavrilov",
-      "email": "gavrilov_i@tass.ru"
-    }
-  ],
+  "author": "ME",
   "dependencies": {
-    "@design-system/core": "6.2.1",
-    "@design-system/external": "6.1.0",
+    "@amcharts/amcharts5": "^5.6.2",
+    "@amcharts/amcharts5-fonts": "^5.0.1",
+    "@amcharts/amcharts5-geodata": "^5.1.2",
     "@front-toolkit/hooks": "1.1.0",
     "@front-toolkit/utils": "1.6.1",
     "@reduxjs/toolkit": "1.8.0",
     "@tiptap/react": "2.0.3",
     "axios": "0.22.0",
+    "chart.js": "^4.4.1",
     "date-fns-tz": "1.3.6",
     "history": "5.3.0",
     "jwt-decode": "3.1.2",
     "query-string": "7.1.1",
     "react": "17.0.2",
+    "react-chartjs-2": "^5.2.0",
     "react-cropper": "2.3.2",
     "react-dom": "17.0.2",
     "react-redux": "7.2.5",
