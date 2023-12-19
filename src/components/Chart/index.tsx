@@ -1,4 +1,4 @@
-import React, {useState, useMemo, useCallback, useEffect} from 'react';
+import React, {useMemo, useCallback} from 'react';
 import {Doughnut} from 'react-chartjs-2'
 import {
     Chart as ChartJS,
@@ -34,31 +34,23 @@ const Charts: React.FC = ({
   startIndex,
   setStartIndex
 }) => {
-    const [cardName, setCardName] =  useState(titlesCard[startIndex]);
-
     const handelSetCard = useCallback((vector) => {
-
         if(startIndex === dataChartSet.length - 1) {
             setStartIndex(0);
-            setCardName(titlesCard[0]);
             return;
         }
 
         if(vector) {
             setStartIndex(startIndex + 1);
-            setCardName(titlesCard[startIndex + 1]);
             return;
         }
 
         if(!vector) {
             setStartIndex(dataChartSet.length - 1);
-            setCardName(titlesCard[dataChartSet.length - 1]);
             return;
         }
 
         setStartIndex(startIndex - 1);
-        setCardName(titlesCard[startIndex - 1]);
-
     }, [startIndex, titlesCard])
 
 
@@ -92,7 +84,7 @@ const Charts: React.FC = ({
         <div className={styles.card}>
             <div className={styles.header}>
                 <div className={styles.cardName}>
-                    {cardName}
+                    {titlesCard}
                 </div>
                 <div className={styles.edit}  onClick={setOpenModal} >
                     <Settings color="primary" sx={{ fontSize: 25 }}/>

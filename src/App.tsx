@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useMemo} from 'react';
 
 import TransitionsModal from 'components/Modal';
 import Charts from 'components/Chart';
@@ -29,6 +29,11 @@ const App: React.FC = () => {
         setOpen(false);
     }, [])
 
+    const title = useMemo( () => {
+        return titles[startIndex]
+    }, [titles, startIndex]);
+
+
   return (
       <div className={styles.app}>
         <TransitionsModal
@@ -40,7 +45,7 @@ const App: React.FC = () => {
         <Charts
             setOpenModal={handelOpen}
             dataChartSet={data}
-            titlesCard={titles}
+            titlesCard={title}
             startIndex={startIndex}
             setStartIndex={setStartIndex}
         />
