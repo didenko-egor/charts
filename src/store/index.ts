@@ -9,18 +9,21 @@ import {
   ThunkDispatch
 } from '@reduxjs/toolkit';
 
+import user from './user';
+
 const { createReduxHistory, routerMiddleware, routerReducer } = createReduxHistoryContext({
   history: createBrowserHistory()
 });
 
 export const rootReducer = combineReducers({
-  router: routerReducer
+  router: routerReducer,
+  user,
 });
 
 export const store = configureStore({
   reducer: rootReducer,
   middleware: getDefaultMiddleware => getDefaultMiddleware()
-    .concat(routerMiddleware),
+      .concat(routerMiddleware),
   devTools: process.env.NODE_ENV !== 'production'
 });
 

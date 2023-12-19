@@ -1,0 +1,113 @@
+.card {
+
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    align-items: center;
+    padding: 10px 15px;
+    color: #212121;
+
+    .icon {
+      font-size: 12px;
+      padding: 0 5px;
+    }
+
+    .left,
+    .right {
+      display: flex;
+      align-items: center;
+      bottom: 200px;
+      font-size: 16px;
+      padding: 5px 10px 10px 10px;
+      color: #414141;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        color: #000000;
+      }
+    }
+
+    .left {
+      left: -50px;
+    }
+
+    .right {
+      right: -50px;
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    color: #212121;
+
+    .cardName {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .edit {
+      font-size: 30px;
+      color: #212121;
+      cursor: pointer;
+
+      &:hover {
+        color: #4b4b4b;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    padding: 40px;
+    background: rgb(248, 249, 251);
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(183, 195, 212) 100%);
+    border: 1px solid #b8c0cd;
+    box-shadow: 0 2px 5px 0 #bababa;
+    position: relative;
+
+    .doughnut {
+      display: flex;
+      align-items: center;
+    }
+
+    .descriptionList {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      margin: 20px;
+
+      .marker {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 1px 10px;
+      }
+
+      .description {
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-bottom: 15px;
+
+        .name {
+          font-size: 18px;
+          font-weight: 700;
+          color: #212121;
+        }
+        .part {
+          font-size: 16px;
+          color: #666666;
+          padding-left: 30px;
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
